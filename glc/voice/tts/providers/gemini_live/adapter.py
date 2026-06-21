@@ -1,8 +1,12 @@
-"""Stub provider for Gemini Live realtime full-duplex TTS."""
+"""Gemini Live realtime full-duplex TTS provider."""
 
 from __future__ import annotations
 
-from glc.voice.tts.base import SynthesizeResult, TTSProvider
+from glc.voice.tts.base import (
+    SynthesizeResult,
+    TTSError,
+    TTSProvider,
+)
 
 import base64  # decode the base64 audio chunks the server sends back.
 import io      # in-memory buffer, used to build the WAV file without touching disk.
